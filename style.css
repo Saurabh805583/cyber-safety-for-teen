@@ -1,0 +1,89 @@
+/* --- Light Mode Colors --- */
+.light-mode {
+    --bg-color: #f0f0f5;
+    --text-color: #0d1b2a;
+    --primary-color: #2a9d8f;
+    --hover-color: #e9c46a;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header / Footer */
+.light-mode header, 
+.light-mode footer {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+}
+
+/* Nav Buttons */
+.nav-btn {
+    border: 2px solid var(--primary-color);
+    padding: 10px 15px;
+    margin: 5px;
+    background: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Info Cards */
+.info-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Page Smooth Fade-in */
+.page-content {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Tip Box Slide Animation */
+#tip-box {
+    position: fixed;
+    bottom: 20px;
+    right: -300px;
+    width: 260px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    transition: right 0.5s ease-in-out;
+    z-index: 999;
+}
+
+#tip-box.show {
+    right: 0;
+}
+
+#tip-box h4 {
+    margin-bottom: 5px;
+}
